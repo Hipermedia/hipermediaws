@@ -1,0 +1,199 @@
+/*------------------------------------------------*/
+/*------------------[BLOCKS]----------------------*/
+/*------------------------------------------------*/
+// PRIMAL
+.PrimalBlocks {
+	padding-top: 4rem;
+	
+	.PrimalBlocks-contenido {
+		// Responsive
+		@media (max-width: $desktop-width) {
+			padding: 1.5rem;
+		}
+		.PrimalBlocks-titulo {
+			color: $main-color-dark;
+			font-weight: bolder;
+		}
+		.PrimalBlocks-subtitulo {
+			margin: 0 0 3rem;
+		}
+		.PrimalBlocks-block {
+			display: inline-block;
+			vertical-align: top;
+			
+			@include gray-fancy-box; 
+			padding: 1.5rem;
+			background-color: #eaeaea;
+			text-align: center;
+			height: 300px;
+			position: relative;
+			
+			width: 45%;
+			margin: 0 2% 3rem;
+
+			// Responsive
+			@media (max-width: $desktop-width) {
+				height: auto;
+			}
+			@media (max-width: $tablet-width) {
+				width: 100%;
+				margin: 0 0 3rem;
+				height: auto;
+			}
+			.PrimalBlocks-blockFigure {
+				font-size: 6rem;
+				color: $main-color;
+			}
+			.PrimalBlocks-blockTitulo {
+				color: $support-color-dark;
+				font-weight: 600;
+				font-size: 1.75rem;
+			}
+			.PrimalBlocks-blockSubtitulo {
+				font-size: 1.05rem;
+				color: #444;
+			}
+			.PrimalBlocks-blockDescripcion {
+				display: none;
+			}
+			.PrimalBlocks-blockAction {
+				font-weight: 600;
+				text-transform: none;
+				font-size: .95rem;
+				position: absolute;
+				bottom: -20px;
+				left: 0;
+				right: 0;
+				margin: 0 25%;
+				@include redondea(1rem);
+
+				// Responsive
+				@media (max-width: $desktop-width) {
+					margin: 0 15%;
+				}
+				@media (max-width: $smaller-width) {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+// SAUTE
+.SauteBlocks {
+	padding-top: 6rem;
+	display: inline-block;
+	width: 100%;
+	
+	.SauteBlocks-contenido {
+		
+		.SauteBlocks-titulos {
+
+			// Responsive
+			@media (max-width: $desktop-width) {
+				padding: 1.5rem;
+			}
+		}
+		.SauteBlocks-titulo {
+			color: $main-color-dark;
+		}
+		.SauteBlocks-subtitulo {
+			margin: 0 0 3rem;
+		}
+		.SauteBlocks-block {
+			display: block;
+			width: 100%;
+			clear: both;			
+			
+			.SauteBlocks-blockFigure {
+				background-position: center top;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				display: block;
+				float: left;
+				width: 50%;
+				margin: 0;	
+				text-align: center;
+				height: 320px;
+				overflow: hidden;		
+
+				// Responsive
+				@media (max-width: $desktop-width) {
+					background-size: 100% 100%;
+				}
+				@media (max-width: $tablet-width) {
+					width: 100%;
+				}
+
+				img {
+					width: 40%;
+				}
+
+			}
+			.SauteBlocks-blockWrapper {
+				background: $divider-color;
+				display: block;
+				float: left;
+				width: 50%;
+				margin: 0;	
+
+				// Responsive
+				@media (max-width: $tablet-width) {
+					width: 100%;
+				}	
+
+				.SauteBlocks-blockContent {
+					padding: 1.5rem 3rem;
+					width: $desktop-width / 2;
+					height: 320px;
+					overflow: hidden;
+
+					// Responsive
+					@media (max-width: $tablet-width) {
+						width: 100%;
+						height: auto;
+						padding-bottom: 3rem;
+						text-align: center;
+						float: none;
+					}	
+
+
+					.SauteBlocks-blockTitulo {
+						// ...
+					}
+					.SauteBlocks-blockSubtitulo {
+						// ...
+					}
+					.SauteBlocks-blockDescripcion {
+						// ...
+					}
+					.SauteBlocks-blockAction {
+						// ...
+					}
+				}
+			}
+
+			/* La salteada -------------------------- */
+			// El estilo de la imagen inpar
+			&:nth-child(odd) .SauteBlocks-blockFigure {
+				float: right;
+			}
+			// El estilo del contenido inpar
+			&:nth-child(odd) .SauteBlocks-blockContent {
+				float: right;
+				text-align: right;
+
+				@media (max-width: $tablet-width) {
+					text-align: center;
+					float: none;
+				}
+			}
+			// El color de fondo para el contenido inpar
+			&:nth-child(odd) .SauteBlocks-blockWrapper {
+				background: none;
+			}
+
+			
+		}
+	}
+}
